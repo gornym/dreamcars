@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content = "width=device-width", initial-scale="1.0">
+    <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <title>GALLERY</title>
+</head>
+<body>
+
+<div class = "menu_gorne" >
+
+<a href = "https://www.facebook.com"><img class = "facebook" src="{{ url_for('static', filename = 'fb.png') }}" width="70" height="70"/></a>
+
+<h1 class = "logo"> DREAM CARS </h1>
+
+<div class="dropdown">
+    <a href="Oferta">MENU</a>
+    <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/about">O NAS</a></li>
+        <li><a href="/kontakt">KONTAKT</a></li>
+    </ul>
+</div>
+</div>
+
+<div class = "menu_srodkowe">
+
+    <div class="kreska10"></div>
+    <div class="kreska11"></div>
+    <div class="kreska12"></div>
+
+    <div class = "tlo">
+
+        <img class = "gallardo" src = "{{ url_for('static', filename = 'gallardo.jpg')}}" width="450" height="250"/>
+        <img class = "diablo" src = "{{ url_for('static', filename = 'diablo.jpg')}}" width="450" height="250"/>
+        <img class = "countach" src = "{{ url_for('static', filename = 'countach.jpeg')}}" width="430" height="250"/>
+
+    </div>
+
+    <div class="kreska13"></div>
+    <div class="kreska14"></div>
+    <div class="kreska15"></div>
+
+    <div class = "tlo1">
+
+        <img class = "testarossa" src = "{{ url_for('static', filename = 'testarossa.jpg')}}" width="400" height="250"/>
+        <img class = "enzo" src = "{{ url_for('static', filename = 'enzo.jpg')}}" width="450" height="250"/>
+        <img class = "f40" src = "{{ url_for('static', filename = 'f40.jpg')}}" width="450" height="250"/>
+
+    </div>
+
+</div>
+
+<div class = "menu_dolne">
+
+    <a class="nazwa">dream-cars.com</a>
+    <a class="nrtel">nr tel. (+48) 987-654-321</a>
+    <a class="mail">d-cars@gmail.com</a>
+
+<script src="https://skrypt-cookies.pl/id/01945235259522dd.js"></script>
+</div>
+
+
+</body>
+</html>
