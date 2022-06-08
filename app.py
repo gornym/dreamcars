@@ -32,12 +32,9 @@ def motorcycle():
 def yacht():
     return render_template('yacht.html')
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login')
 def login():
-    if request.method == "POST":
-        return request.form["username"] + " + " + request.form["password"]
-    else:
-        return render_template('login.html')
+    return render_template('login.html')
 
 @app.route('/error_denied')
 def error_denied():
