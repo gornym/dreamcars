@@ -32,6 +32,30 @@ def motorcycle():
 def yacht():
     return render_template('yacht.html')
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == "POST":
+        return request.form["username"] + " + " + request.form["password"]
+    else:
+        return render_template('login.html')
+
+@app.route('/error_denied')
+def error_denied():
+    abort(401)
+
+@app.route('/error_internal')
+def error_internal():
+    return render_template('template.html', name='ERROR 505'), 505
+
+@app.route('/error_not_found')
+def error_not_found():
+    response = make_response(render_template('template.html', name='ERROR 404'), 404)
+    response.headers['X-Something'] = 'A value'
+    return response
+
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
     app.run(debug=True)
