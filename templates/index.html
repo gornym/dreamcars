@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}DreamCars{% endblock %}
+{% set active_page = "index" -%}
+{% block body %}
+<head>
+    <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+</head>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{{ url_for('static', filename = 'mercedessls.jpg') }}" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename = 'mclarenp1.jpg') }}" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ url_for('static', filename = 'bmwm4.jpg') }}" alt="Third slide">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+
+    <h1 class="display-4">Jeżeli lubisz motoryzację i szukasz tapety na komputer to dobrze trafiłeś!</h1>
+    <p class="lead">Twórz! - Udostępniaj! - Szukaj! ✔️🥇</p>
+
+    </div>
+</div>
+
+<div class = "menu_dolne">
+
+    <a class="nazwa">dream-cars.com</a>
+    <a class="nrtel">nr tel. (+48) 987-654-321</a>
+    <a class="mail">d-cars@gmail.com</a>
+
+<script src="https://skrypt-cookies.pl/id/01945235259522dd.js"></script>
+</div>
+
+{% endblock %}
