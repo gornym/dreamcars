@@ -5,8 +5,8 @@ from flask import abort, redirect, url_for, make_response
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return render_template('home.html')
+def index():
+    return render_template('index.html')
 
 @app.route('/gallery')
 def gallery():
