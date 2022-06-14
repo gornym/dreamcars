@@ -20,17 +20,13 @@ def about():
 def kontakt():
     return render_template('kontakt.html')
 
-@app.route('/cars')
-def cars():
-    return render_template('cars.html')
+@app.route('/forget')
+def forget():
+    return render_template('forget.html')
 
-@app.route('/motorcycle')
-def motorcycle():
-    return render_template('motorcycle.html')
-
-@app.route('/yacht')
-def yacht():
-    return render_template('yacht.html')
+@app.route('/register')
+def register():
+    return render_template('register.html')
 
 @app.route('/login')
 def login():
