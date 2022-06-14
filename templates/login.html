@@ -1,57 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block title %}DreamCars{% endblock %}
+{% set active_page = "index" -%}
+{% block body %}
+
+
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name = "viewport" content = "width=device-width", initial-scale="1.0">
-    <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/style.css') }}">
-    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
-<title>Login Page</title>
+	<title>Login Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/style.css') }}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+	<div class="container-fluid">
+		<div class="row">
+			<img class = "image-container" src="{{ url_for('static', filename = 'logo.png') }}" width="712" height="600"/>
 
-<h3>Login Form</h3>
+			<div class="col-lg-6 col-md-6 form-container">
+				<div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box text-center">
 
-<div class = "menu_gorne" >
+					<div class="heading mb-4">
+						<h4>Zaloguj się na konto</h4>
+					</div>
+					<form>
+						<div class="form-input">
+							<span><i class="fa fa-envelope"></i></span>
+							<input type="email" placeholder="Adres email" required>
+						</div>
+						<div class="form-input">
+							<span><i class="fa fa-lock"></i></span>
+							<input type="password" placeholder="Hasło" required>
+						</div>
+						<div class="row mb-3">
+							<div class="col-6 d-flex">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="cb1">
+									<label class="custom-control-label text-white" for="cb1">Zapamiętaj mnie</label>
+								</div>
+							</div>
+							<div class="col-6 text-right">
+								<a href="/forget" class="forget-link">Zapomniałem hasła</a>
+							</div>
+						</div>
+						<div class="text-left mb-3">
+							<button type="submit" class="btn">Zaloguj</button>
+						</div>
+						<div class="text-center mb-2">
+							<div class="mb-3" style="color: #777">zaloguj się przez</div>
 
-<a href = "https://www.facebook.com"><img class = "facebook" src="{{ url_for('static', filename = 'fb.png') }}" width="70" height="70"/></a>
+							<a href="" class="btn btn-social btn-facebook">facebook</a>
 
-<h1 class = "logo"> DREAM CARS </h1>
+							<a href="" class="btn btn-social btn-google">google</a>
 
-<div class="dropdown">
-    <a href="Oferta">MENU</a>
-    <ul>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/gallery">GALERIA</a></li>
-        <li><a href="/about">O NAS</a></li>
-        <li><a href="/kontakt">KONTAKT</a></li>
-    </ul>
-</div>
-</div>
-
-<div class = "menu_srodkowe">
-
-    <h1 class="tekst6">Dołącz do nas za darmo lub się zaloguj!</h1>
-    <h1 class="tekst7"><b>Najlepsza darmowa wyszukiwarka tapet ✔️🥇</b></h1>
-    <div class="kreska1"></div>
-    <div class="kreska2"></div>
-    <div class="kreska3"></div>
-
-    <div class="logowanie"></div>
-        <Label class="login">Login </Label><input class="login1" type="text" name="username"/><br>
-        <label class="haslo">Hasło </label><input class="haslo1" type="password" name="password"/><br>
-        <input class="ok" value="ZALOGUJ "type="submit"/>
-    </div>
-</div>
-
-<div class = "menu_dolne">
-
-    <a class="nazwa">dream-cars.com</a>
-    <a class="nrtel">nr tel. (+48) 987-654-321</a>
-    <a class="mail">d-cars@gmail.com</a>
-
-<script src="https://skrypt-cookies.pl/id/01945235259522dd.js"></script>
-</div>
-
+							<a href="" class="btn btn-social btn-twitter">twitter</a>
+						</div>
+						<div style="color: #777">Nie masz konta
+							<a href="/register" class="register-link">Zarejestruj się tutaj</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
+
+
+ {% endblock %}
